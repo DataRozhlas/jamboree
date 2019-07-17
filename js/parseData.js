@@ -1,3 +1,4 @@
+const fs = require('fs');
 const readXlsxFile = require('read-excel-file/node');
 
 const schema = {
@@ -91,6 +92,7 @@ const schema = {
     },    
 };
 
-readXlsxFile('../data/data.xlsx', { schema }).then((rows) => {
-    console.log(rows);
+readXlsxFile('../data/data.xlsx', { schema }).then((rows , errors) => {
+    console.log(errors);
+    fs.writeFileSync('../data/data.json', JSON.stringify(rows));
 });
