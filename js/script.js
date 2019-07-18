@@ -1,12 +1,8 @@
-﻿import { byeIE } from "./byeie"; // loučíme se s IE
+﻿import "./byeie"; // loučíme se s IE
+import Highmaps from 'highcharts/highmaps';
 
-byeIE();
-
-/*
-// snadné načtení souboru pro každého!
-fetch("https://blabla.cz/blabla.json")
+fetch('https://data.irozhlas.cz/jamboree/data/data.json')
   .then(response => response.json()) // nebo .text(), když to není json
   .then(data => {
-    // tady jde provést s daty cokoliv
+    console.log(data);
   });
-*/

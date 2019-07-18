@@ -94,5 +94,5 @@ const schema = {
 
 readXlsxFile('../data/data.xlsx', { schema }).then((rows , errors) => {
     console.log(errors);
-    fs.writeFileSync('../data/data.json', JSON.stringify(rows));
+    fs.writeFileSync('../data/data.json', JSON.stringify(rows.rows));
 });

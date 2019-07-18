@@ -6,3 +6,4 @@ export function byeIE() {
         document.body.appendChild(warn);
     }
 }
+byeIE();
