@@ -103,7 +103,7 @@ const jeStatvgeoJSON = staty => {
     staty.forEach(i => {
         if (!nazvyStatuvMape.includes(i.stat)) {console.log(i.stat)};
     });
-}
+};
 
 const sjednotStaty = staty => {
     staty.forEach(i => {
@@ -127,9 +127,10 @@ const sjednotStaty = staty => {
         if (i.stat === 'Serbia') {i.stat = 'Republic of Serbia'};
         if (i.stat === 'Syrian Arab Republic') {i.stat = 'Syria'};
         if (i.stat === 'Timor-Leste') {i.stat = 'East Timor'};
-        if (i.stat === 'Bolivarian Republic of Venezuela') {i.stat = 'Venezuela'};        
+        if (i.stat === 'Bolivarian Republic of Venezuela') {i.stat = 'Venezuela'};
+        if (i.stat === 'Scouts of China') {i.stat = 'China'};        
     })        
-}
+};
 
 readXlsxFile('../data/data.xlsx', { schema }).then((rows , errors) => {
     console.log(errors);
