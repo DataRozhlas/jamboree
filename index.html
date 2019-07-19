@@ -216,7 +216,7 @@
     </h1>
     <script>
       if (window.location.href.indexOf("www.irozhlas") < 0) {
-        document.getElementById("snfl-title-div").innerHTML = "Kde je nejvíc skautůch";
+        document.getElementById("snfl-title-div").innerHTML = "Kde je nejvíc skautů";
       }
     </script>
   </div>
@@ -231,7 +231,9 @@
 
   <div class="row-main row-main--narrow">
     
-    
+    </div><div class="row-main row-main--article">
+<div id="mapa"></div>
+</div><div class="row-main row-main--narrow">
     <p class="meta meta--right meta--big">
       <!--[[ZPRAVY_SNOWFALL_AUTHORS:FOOTER]]-->
     </p>
@@ -338,6 +340,30 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 
 /***/ }),
 
+/***/ "./js/helperFunctions.js":
+/*!*******************************!*\
+  !*** ./js/helperFunctions.js ***!
+  \*******************************/
+/*! exports provided: sectiSkauty */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"sectiSkauty\", function() { return sectiSkauty; });\nvar sectiSkauty = function sectiSkauty(zaznam) {\n  return zaznam.reduce(function (acc, curr) {\n    return acc + curr.celkem;\n  }, 0);\n};\n\n//# sourceURL=webpack:///./js/helperFunctions.js?");
+
+/***/ }),
+
+/***/ "./js/kresliMapu.js":
+/*!**************************!*\
+  !*** ./js/kresliMapu.js ***!
+  \**************************/
+/*! exports provided: kresliMapu */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"kresliMapu\", function() { return kresliMapu; });\n/* harmony import */ var highcharts_highmaps__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! highcharts/highmaps */ \"./node_modules/highcharts/highmaps.js\");\n/* harmony import */ var highcharts_highmaps__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(highcharts_highmaps__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _highcharts_map_collection_custom_world_palestine_geo_json__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @highcharts/map-collection/custom/world-palestine.geo.json */ \"./node_modules/@highcharts/map-collection/custom/world-palestine.geo.json\");\nvar _highcharts_map_collection_custom_world_palestine_geo_json__WEBPACK_IMPORTED_MODULE_1___namespace = /*#__PURE__*/__webpack_require__.t(/*! @highcharts/map-collection/custom/world-palestine.geo.json */ \"./node_modules/@highcharts/map-collection/custom/world-palestine.geo.json\", 1);\n\n\nvar kresliMapu = function kresliMapu(data) {\n  highcharts_highmaps__WEBPACK_IMPORTED_MODULE_0___default.a.mapChart('mapa', {\n    chart: {\n      map: 'custom/world-palestine'\n    },\n    title: {\n      text: 'Highmaps basic demo'\n    },\n    subtitle: {\n      text: 'Source map: <a href=\"http://code.highcharts.com/mapdata/custom/world-palestine-highres.js\">World with Palestine areas, high resolution</a>'\n    },\n    mapNavigation: {\n      enabled: true,\n      buttonOptions: {\n        verticalAlign: 'bottom'\n      }\n    },\n    colorAxis: {\n      min: 0\n    },\n    series: [{\n      data: data,\n      name: 'Random data',\n      states: {\n        hover: {\n          color: '#BADA55'\n        }\n      },\n      dataLabels: {\n        enabled: true,\n        format: '{point.name}'\n      }\n    }]\n  });\n};\n\n//# sourceURL=webpack:///./js/kresliMapu.js?");
+
+/***/ }),
+
 /***/ "./js/script.js":
 /*!**********************!*\
   !*** ./js/script.js ***!
@@ -346,7 +372,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _byeie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./byeie */ \"./js/byeie.js\");\n/* harmony import */ var highcharts_highmaps__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! highcharts/highmaps */ \"./node_modules/highcharts/highmaps.js\");\n/* harmony import */ var highcharts_highmaps__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(highcharts_highmaps__WEBPACK_IMPORTED_MODULE_1__);\n/* harmony import */ var _highcharts_map_collection_custom_world_palestine_geo_json__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! @highcharts/map-collection/custom/world-palestine.geo.json */ \"./node_modules/@highcharts/map-collection/custom/world-palestine.geo.json\");\nvar _highcharts_map_collection_custom_world_palestine_geo_json__WEBPACK_IMPORTED_MODULE_2___namespace = /*#__PURE__*/__webpack_require__.t(/*! @highcharts/map-collection/custom/world-palestine.geo.json */ \"./node_modules/@highcharts/map-collection/custom/world-palestine.geo.json\", 1);\n // loučíme se s IE\n\n\n\nfetch('https://data.irozhlas.cz/jamboree/data/data.json').then(function (response) {\n  return response.json();\n}) // nebo .text(), když to není json\n.then(function (data) {\n  console.log(highcharts_highmaps__WEBPACK_IMPORTED_MODULE_1___default.a, _highcharts_map_collection_custom_world_palestine_geo_json__WEBPACK_IMPORTED_MODULE_2__);\n});\n\n//# sourceURL=webpack:///./js/script.js?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _byeie__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./byeie */ \"./js/byeie.js\");\n/* harmony import */ var _helperFunctions__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./helperFunctions */ \"./js/helperFunctions.js\");\n/* harmony import */ var _kresliMapu__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./kresliMapu */ \"./js/kresliMapu.js\");\nfunction _toConsumableArray(arr) { return _arrayWithoutHoles(arr) || _iterableToArray(arr) || _nonIterableSpread(); }\n\nfunction _nonIterableSpread() { throw new TypeError(\"Invalid attempt to spread non-iterable instance\"); }\n\nfunction _iterableToArray(iter) { if (Symbol.iterator in Object(iter) || Object.prototype.toString.call(iter) === \"[object Arguments]\") return Array.from(iter); }\n\nfunction _arrayWithoutHoles(arr) { if (Array.isArray(arr)) { for (var i = 0, arr2 = new Array(arr.length); i < arr.length; i++) { arr2[i] = arr[i]; } return arr2; } }\n\n // loučíme se s IE\n\n\n\nfetch('https://data.irozhlas.cz/jamboree/data/data.json').then(function (response) {\n  return response.json();\n}) // nebo .text(), když to není json\n.then(function (data) {\n  var unikatniKody = _toConsumableArray(new Set(data.map(function (x) {\n    return x.kod;\n  })));\n\n  unikatniKody.forEach(function (kod) {\n    console.log(data.filter(function (x) {\n      return x.kod === kod;\n    }));\n  });\n  Object(_kresliMapu__WEBPACK_IMPORTED_MODULE_2__[\"kresliMapu\"])();\n});\n\n//# sourceURL=webpack:///./js/script.js?");
 
 /***/ }),
 

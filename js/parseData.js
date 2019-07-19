@@ -10,6 +10,10 @@ const schema = {
         prop : 'region',
         type : String 
     },
+    'Organisations::Organization Name EN' : {
+        prop : 'organizace',
+        type : String 
+    },
     'Year of Census in NSO' : {
         prop : 'rokScitani',
         type : Number
