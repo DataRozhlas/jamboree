@@ -20,7 +20,23 @@ const schema = {
     },    
 };
 
-readXlsxFile('../data/pop014male.xlsx', { schema }).then((rows , errors) => {
+readXlsxFile('../data/pop014male.xlsx', { schema }).then((males , errors) => {
     console.log(errors);
-    console.log(rows.rows);
+    readXlsxFile('../data/pop014female.xlsx', { schema }).then((females , errors) => {
+        console.log(errors);
+        const output = data.map(i => {
+            let chlapci = males.rows.find(j => {
+                if (i.kod === 'WEB') return j.code === 'PSE'; 
+                return j.code === i.kod;
+            });
+            chlapci = chlapci.pop014 ? chlapci.pop014 : null; 
+            let divky = females.rows.find(j => {
+                if (i.kod === 'WEB') return j.code === 'PSE'; 
+                return j.code === i.kod;
+            });
+            divky = divky.pop014 ? divky.pop014 : null;
+            return ({...i, popm: chlapci, popf: divky});
+        });
+        fs.writeFileSync('../data/data.json', JSON.stringify(output));
+    });    
 });
