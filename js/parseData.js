@@ -262,8 +262,9 @@ const slovnicek = [{"stat":"Algeria","cs":"Alžírsko"},
 {"stat":"Zambia","cs":"Zambie"},
 {"stat":"Zimbabwe","cs":"Zimbabwe"}];
 
+const mapa = JSON.parse(fs.readFileSync('../node_modules/@highcharts/map-collection/custom/world-palestine.geo.json'));
+
 const jeStatvgeoJSON = staty => {
-    const mapa = JSON.parse(fs.readFileSync('../node_modules/@highcharts/map-collection/custom/world-palestine.geo.json'));
     const nazvyStatuvMape = [];
     mapa.features.forEach(stat => nazvyStatuvMape.push(stat.properties.name));
     staty.forEach(i => {
@@ -304,7 +305,8 @@ readXlsxFile('../data/data.xlsx', { schema }).then((rows , errors) => {
     jeStatvgeoJSON(rows.rows);
     const output = rows.rows.map(i => {
         const preklad = slovnicek.find(j => j.stat === i.stat);
-        return ({...i, cs: preklad.cs});
+        const kod = mapa.features.find(k => k.properties.name === i.stat);
+        return ({...i, cs: preklad.cs, kod: kod.properties['iso-a3']});
     });
     fs.writeFileSync('../data/data.json', JSON.stringify(output));
 });
