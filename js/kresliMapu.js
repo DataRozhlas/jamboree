@@ -1,5 +1,6 @@
 import Highcharts from 'highcharts/highmaps';
 import map from '@highcharts/map-collection/custom/world-palestine-highres.geo.json';
+import { zlidstiCislo } from './helperFunctions';
 
 export const kresliMapu = data => {
     Highcharts.setOptions({
@@ -14,7 +15,12 @@ export const kresliMapu = data => {
           text: 'Kde je nejvíc registrovaných skautů?'
       },
       subtitle: {
-          text: 'Země jsou vybarvené podle počtu členů Světové organizace skautského hnutí podle posledního dostupného sčítání'
+          text: 'Země jsou vybarvené podle počtu členů Světové organizace skautského hnutí na základě posledního dostupného sčítání'
+      },
+      tooltip: {
+            formatter: function () {
+                return `<strong>${this.point.options.name}:</strong> ${zlidstiCislo(this.point.options.value)} skautů <br> <em>kliknutím zobrazíte podrobnosti</em>`;                
+            }
       },
       credits: {
         text: 'Zdroje dat: Světová organizace skautského hnutí, Junák - český skaut, Světová banka, Natural Earth',
@@ -38,8 +44,7 @@ export const kresliMapu = data => {
           minorTickInterval: 1,          
           minorGridLineColor: 'white',
           tickLength: 0,
-      },
-      
+      },      
       series: [{
           mapData: map,
           joinBy: ['iso-a3', 'kod'],
