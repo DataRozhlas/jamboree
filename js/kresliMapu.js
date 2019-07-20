@@ -3,16 +3,13 @@ import map from '@highcharts/map-collection/custom/world-palestine.geo.json';
 
 export const kresliMapu = data => {
     Highcharts.mapChart('mapa', {
-      chart: {
-          map: 'custom/world-palestine'
-      },
-  
+      
       title: {
           text: 'Highmaps basic demo'
       },
   
       subtitle: {
-          text: 'Source map: <a href="http://code.highcharts.com/mapdata/custom/world-palestine-highres.js">World with Palestine areas, high resolution</a>'
+          text: 'podtit'
       },
   
       mapNavigation: {
@@ -23,11 +20,17 @@ export const kresliMapu = data => {
       },
   
       colorAxis: {
-          min: 0
+          min: 1,
+          max: 22000000,
+          type: 'logarithmic',
       },
   
       series: [{
+          mapData: map,
+          joinBy: ['iso-a3', 'kod'],
           data: data,
+          borderColor: 'black',
+          borderWidth: 0.2,
           name: 'Random data',
           states: {
               hover: {

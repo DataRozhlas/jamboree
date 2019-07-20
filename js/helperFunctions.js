@@ -1,1 +1,0 @@
-export const sectiSkauty = zaznam => zaznam.reduce((acc, curr) => acc + curr.celkem, 0);
