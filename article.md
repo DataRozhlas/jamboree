@@ -7,4 +7,5 @@ options: [noheader, nopic] #wide, noheader (, nopic)
 
 <wide>
 <div id="mapa"></div>
+<div id="informace"></div>
 </wide>

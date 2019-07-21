@@ -17,9 +17,9 @@ fetch('https://data.irozhlas.cz/jamboree/data/data.json')
           return acc + curr.celkem;
         }, 0);
       const nazev = data
-        .filter(x => x.kod === kod)[0].cs; 
+        .filter(x => x.kod === kod)[0].cs;   
       skautiVZemich.push({ kod: kod, value: soucet, name: nazev });      
     });
     console.log(skautiVZemich);
-    kresliMapu(skautiVZemich);    
+    kresliMapu(skautiVZemich, data);    
   });
