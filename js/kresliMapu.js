@@ -1,7 +1,7 @@
 import Highcharts from 'highcharts/highmaps';
 import map from '@highcharts/map-collection/custom/world-palestine-highres.geo.json';
 import {
-  zlidstiCislo, vypisOrganizace, zjistiRokScitani, formatNumber, celkemSkautu, desetinnaCarka 
+  zlidstiCislo, vypisOrganizace, zjistiRokScitani, formatNumber, celkemSkautu, desetinnaCarka,
 } from './helperFunctions';
 
 export const kresliMapu = (data, zdrojovaData) => {

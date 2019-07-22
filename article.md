@@ -5,9 +5,9 @@ libraries: [] #jquery, d3, highcharts, datatables
 options: [noheader, nopic] #wide, noheader (, nopic)
 ---
 
-Server iROZHLAS.cz při té příležitosti zpracoval data o členské základně největší skautské organizace v jednotlivých zemích. Jasně ukazuje, že ani jedné totalitě se u nás skauting vymýtit nepodařilo. V Evropě patří Česko mezi skautské velmoci: skautů registrovaných v organizaci Junák – český skaut je u nás podle posledního sčítání 56 tisíc, víc než ve čtyřikrát lidnatějším Polsku i ve všech ostatních zemích střední a východní Evropy.
+Server iROZHLAS.cz při té příležitosti zpracoval data o členské základně největší skautské organizace v jednotlivých zemích. Jasně ukazuje, že ani jedné totalitě se u nás skauting vymýtit nepodařilo. V Evropě patří Česko mezi skautské velmoci: skautů registrovaných v organizaci Junák – český skaut je podle nejčerstvějších informací více než 64 tisíc.
 
-V přepočtu na populaci mladší 14 let (2,26 procenta chlapců a 2,13 procenta dívek) pak Česko předstihuje i Německo, Francii nebo Španělsko a vyrovnává se skandinávským zemím.
+Jasným evropským rekordmanem je ale Velká Británie, která je kolébkou skautingu. Tamní dvě organizace sdružují celý milión skautů a skautek. Na letošní jamboree vyslali Britové delegaci pěti tisíc lidí.
 
 Vůbec nejvíc skautů – přes dvacet milionů – je registrováno v Indonésii, kde je členství v této organizaci pro děti často povinné, protože [tvoří součást vzdělávacího systému](https://en.wikipedia.org/wiki/Gerakan_Pramuka_Indonesia). Společně s dalšími lidnatými převážně muslimskými zeměmi, jako je Bangladéš či Pákistán, se tak Indonésie zasadila o to, že téměř polovina skautů má dnes ze všech náboženství nejblíž právě k islámu.
 
@@ -20,11 +20,13 @@ Povinnost k Bohu (vyššímu principu) je součástí skautského slibu, různé
 <p id="informace"></p>
 </wide>
 
-Mapa může být zkreslená tím, že [Světová organizace skautského hnutí](https://cs.wikipedia.org/wiki/Sv%C4%9Btov%C3%A1_organizace_skautsk%C3%A9ho_hnut%C3%AD) je sice největší a nejstarší – byla založena v roce 1922 a má příbližně 50 milionů členů – ale není to jediné sdružení skautů. Dívčí oddíly se často sdružují ve Světové asociaci skautek (10 milionů členek). Proto nejsou v mapě například u Spojených států započítány dívky – jsou totiž započítány v jiné organizaci.
+Mapa je zejména v Evropě zkreslená tím, že [Světová organizace skautského hnutí](https://cs.wikipedia.org/wiki/Sv%C4%9Btov%C3%A1_organizace_skautsk%C3%A9ho_hnut%C3%AD) je sice největší a nejstarší – byla založena v roce 1922 a má příbližně 50 milionů členů – ale není to jediné sdružení skautů. Dívčí oddíly se často sdružují ve Světové asociaci skautek, která má 10 milionů členek. Je to případ zmíněné Velké Británie nebo například Polska či Spojených států.
 
 „Některé národní organizace jsou členy v obou (třeba my), není jich ale tolik a jsou spíš méně početné. Celkem se tedy uvádí 60 milionů skautů na světě, i když je tam nějaký překryv,“ vysvětluje mluvčí Junáka Barbora Trojak.
 
-Další zkreslení do mapy vnáší to, že sčítání skautů není povinné. Většina organizací jej sice uskutečnila a do centrály odeslala data k 31. prosinci 2017, v některých zemích jsou ale dostupná jen starší čísla. Například v Čadu se poslední sčítání skautů uskutečnilo v roce 1996.
+Čísla jsou orientační i proto, že sčítání skautů není povinné. Většina organizací jej sice uskutečnila a do centrály odeslala data k 31. prosinci 2017, v některých zemích jsou ale dostupná jen starší čísla. Například v Čadu se poslední sčítání skautů uskutečnilo v roce 1996.
+
+<h3>Americké jamboree: přátelství i adrenalin</h3>
 
 Čeští skauti si letos připomínají 30 let od obnovy svého hnutí a současně nejdelší éru svobodného fungování ve své historii.
 
