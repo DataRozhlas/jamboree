@@ -1,5 +1,4 @@
 ﻿import "./byeie"; // loučíme se s IE
-import { sectiSkauty } from './helperFunctions'
 import { kresliMapu } from './kresliMapu'
 
 
@@ -20,6 +19,5 @@ fetch('https://data.irozhlas.cz/jamboree/data/data.json')
         .filter(x => x.kod === kod)[0].cs;   
       skautiVZemich.push({ kod: kod, value: soucet, name: nazev });      
     });
-    console.log(skautiVZemich);
     kresliMapu(skautiVZemich, data);    
   });
